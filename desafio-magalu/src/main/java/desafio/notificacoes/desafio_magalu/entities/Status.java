@@ -18,6 +18,17 @@ public Status() {
 }
 
 
+
+
+public Status(long statusId, String description) {
+	super();
+	this.statusId = statusId;
+	this.description = description;
+}
+
+
+
+
 public long getStatusId() {
 	return statusId;
 }
@@ -34,6 +45,29 @@ public void setDescription(String description) {
 	this.description = description;
 }
 	
+
+public enum values{
+	PENDING(1L,"pending"),
+	SUCESS(2L,"sucess"),
+	ERROR(3L,"error"),
+	CANCELED(4L,"canceled");
+	
+	private Long id;
+	private String description;
+	
+	private values(Long id, String description) {
+		this.id = id;
+		this.description = description;
+	}
+	
+	
+	public Status toStatus() {
+		return new Status(id,description);
+	}
+	
+	
+	
+}
 
 
 }
