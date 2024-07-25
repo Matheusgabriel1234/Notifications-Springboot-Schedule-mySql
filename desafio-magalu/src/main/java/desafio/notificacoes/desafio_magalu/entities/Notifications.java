@@ -99,6 +99,20 @@ public void setChannel(Channel channel) {
 
 
 
+
+
+public Status getStatus() {
+	return status;
+}
+
+
+
+public void setStatus(Status status) {
+	this.status = status;
+}
+
+
+
 @Override
 public int hashCode() {
 	return Objects.hash(id);
